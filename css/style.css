@@ -105,6 +105,15 @@ body {
     left: 30px;
 }
 
+.navbar #close {
+    display: none;
+}
+
+.mobile {
+    display: none;
+    align-items: center;
+}
+
 /* Home Page */
 
 #mainbanner {
@@ -153,11 +162,12 @@ body {
 
 #feature {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: stretch;
     background-color: black;
     padding: 80px 10%;
-    min-width: 1250px;
+    /* min-width: 1250px; */
+    flex-wrap: wrap;
 }
 
 #feature .fe-box {
@@ -166,10 +176,9 @@ body {
     padding: 25px 15px 15px 15px;
     border: 1px solid rgb(47, 47, 47);
     border-radius: 8px;
-    margin: 15px 0;
+    margin: 15px 30px;
     background-color: rgb(40, 40, 40);
     /* color: rgb(191, 194, 201); */
-    margin: 0 10px;
     transition: 0.2s ease;
 }
 
@@ -192,7 +201,7 @@ body {
     display: flex;
     flex-direction: column;
     text-align: center;
-    min-width: 1250px;
+    /* min-width: 1250px; */
 }
 
 #seniors h2 {
@@ -201,7 +210,7 @@ body {
 
 #seniors .senior-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     padding-top: 20px;
     flex-wrap: wrap;
 }
@@ -215,7 +224,7 @@ body {
     color: white;
     border-radius: 12px;
     cursor: pointer;
-    margin: 15px 10px;
+    margin: 15px 30px;
     transition: 0.2s ease;
     position: relative;
 }
@@ -307,10 +316,12 @@ body {
     align-items: flex-end;
     padding-right: 8%;
     background-image: url("/Users/GJ/Desktop/Web Dev/Portfolio-WxFace-ECommerce-Website/wxface/the-deep-senior/photoshop/visit-the-deep.jpg");
-    width: 1100px;
     height: 50vh;
+    width: 100%;
+    max-width: 1050px;
+    background-repeat: no-repeat;
+    background-position: top left;
     background-size: cover;
-    background-position: center;
     border: 1px solid grey;
     border-radius: 40px;
     margin: 25px auto;
@@ -323,10 +334,12 @@ body {
     align-items: flex-start;
     padding-left: 8%;
     background-image: url("/Users/GJ/Desktop/Web Dev/Portfolio-WxFace-ECommerce-Website/wxface/the-deep-senior/photoshop/visit-the-surface.jpg");
-    width: 1100px;
     height: 50vh;
+    width: 100%;
+    max-width: 1050px;
+    background-repeat: no-repeat;
+    background-position: top right;
     background-size: cover;
-    background-position: center;
     border: 1px solid grey;
     border-radius: 40px;
     margin: 25px auto;
@@ -349,10 +362,21 @@ body {
 
 #newsletter {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     background-color: white;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+#newsletter .signup {
+    display: flex;
+    width: 100%;
+    max-width: 2000px;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 #newsletter p {
@@ -366,10 +390,11 @@ body {
 #newsletter .email-address {
     display: flex;
     width: 40%;
+    justify-content: flex-end;
 }
 
 #newsletter input {
-    height: 2.5rem;
+    height: 2.25rem;
     min-width: 300px;
     padding: 0.125em 1em;
     font-size: 30px;
@@ -404,7 +429,7 @@ body {
 
 #main-footer {
     width: 100%;
-    max-width: 1250px;
+    max-width: 2000px;
     background-color: black;
     display: flex;
     flex-wrap: wrap;
@@ -486,4 +511,168 @@ body {
 #footer .copyright p{
     font-size: 20px;
     color: gray;
+}
+
+
+/* Start Media Query */
+@media (max-width: 1180px) {
+    #seniors {
+        padding: 40px 20px;
+        flex-wrap: wrap;
+    }
+    #seniors .senior-container .senior {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    #newsletter .signup {
+        flex-direction: column;
+        justify-content: center;
+    }
+    #newsletter .signup .newstext {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #newsletter .signup .email-address {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media (max-width: 799px) {
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        height: 100vh;
+        width: 300px;
+        background-color: white;
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+        padding: 80px 0 0 10px;
+        transition: 0.3s ease;
+    }
+    .navbar.active {
+        right: 0;
+    }
+    .navbar li {
+        margin-bottom: 25px;
+    }
+    .navbar li a {
+        color: black;
+    }
+    .navbar #close {
+        display: flex;
+        text-decoration: none;
+    }
+    .mobile {
+        display: flex;
+        align-items: center;
+    }
+    .mobile i {
+        padding-left: 20px;
+    }
+    #feature {
+        justify-content: center;
+    }
+    #feature .fe-box {
+        margin: 15px 30px;
+    }
+    #feature,
+    #seniors,
+    #small-banner .banner-box-1,
+    #small-banner .banner-box-2 {
+        width: 100%;
+        min-width: none;
+    }
+    #seniors .senior {
+        margin: 15px 20px;
+    }
+    #small-banner .banner-box-1,
+    #small-banner .banner-box-2 {
+        height: 400px;
+    }
+    #small-banner span {
+        font-size: 20px;
+    }
+    #newsletter .signup,
+    #newsletter .signup .newstext {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #newsletter .signup .email-address {
+        display: flex;
+        justify-content: center;
+    }
+    #close {
+        position: absolute;
+        top: 30px;
+        left: 40px;
+        color: black;
+        font-size: 24px;
+    }
+    #bag-symbol {
+        display: none;
+    }
+}
+@media (max-width: 580px) {
+    #header {
+        padding: 20px 25px;
+    }
+    #mainbanner {
+        background-position: right -330px center;
+        align-items: center;
+    }
+    #mainbanner .banner-wordings {
+        text-align: center;
+        margin-left: 0;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .navbar {
+        right: -200px;
+        width: 200px;
+    }
+    #small-banner {
+        padding: 20px;
+    }
+    #small-banner .banner-box-2 {
+        background-position: right -60px center;
+        height: 300px;
+        padding-right: 20px;
+    }
+    #small-banner .banner-box-1 {
+        background-position: left -60px center;
+        height: 300px;
+        padding-left: 100px;
+        text-align: right;
+    }
+    #newsletter .signup .newstext h4,
+    #newsletter .signup .newstext p {
+        text-align: center;
+    }
+    #newsletter .signup .email-address {
+        flex-direction: column;  
+    }
+    #newsletter input {
+        border: 1px solid black;
+        border-right: auto;
+        border-radius: 4px;
+        border-top-right-radius: auto;
+        border-bottom-right-radius: auto;
+        margin-bottom: 10px;
+    }
+    #newsletter button {
+        border: 1px solid black;
+        border-left: auto;
+        border-radius: 4px;
+        border-top-left-radius: auto;
+        border-bottom-left-radius: auto;
+    }
 }
