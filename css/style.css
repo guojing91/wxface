@@ -117,7 +117,7 @@ body {
 /* Home Page */
 
 #mainbanner {
-    background-image: url("/Users/GJ/Desktop/Web Dev/Portfolio-WxFace-ECommerce-Website/wxface/banner/banner.jpeg");
+    background-image: url(../banner/banner.jpeg);
     height: 60vh;
     width: 100%;
     background-repeat: no-repeat;
@@ -315,7 +315,7 @@ body {
     justify-content: center;
     align-items: flex-end;
     padding-right: 8%;
-    background-image: url("/Users/GJ/Desktop/Web Dev/Portfolio-WxFace-ECommerce-Website/wxface/the-deep-senior/photoshop/visit-the-deep.jpg");
+    background-image: url(../the-deep-senior/photoshop/visit-the-deep.jpg);
     height: 50vh;
     width: 100%;
     max-width: 1050px;
@@ -333,7 +333,7 @@ body {
     justify-content: center;
     align-items: flex-start;
     padding-left: 8%;
-    background-image: url("/Users/GJ/Desktop/Web Dev/Portfolio-WxFace-ECommerce-Website/wxface/the-deep-senior/photoshop/visit-the-surface.jpg");
+    background-image: url(../the-deep-senior/photoshop/visit-the-surface.jpg);
     height: 50vh;
     width: 100%;
     max-width: 1050px;
