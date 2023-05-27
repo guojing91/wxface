@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WxFace</title>
+    <title>Faces</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -22,8 +22,8 @@
         </div>
         <div>
             <ul class="navbar">
-                <li><a class="active" href="index.html">Home</a></li>
-                <li><a href="faces.html">Faces</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a class="active" href="faces.html">Faces</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a id="bag-symbol" href="cart.html"><i class="fa fa-shopping-bag"></i></a></li>
                 <a href="#" id="close"><i class="fa fa-times"></i></a>
@@ -35,38 +35,51 @@
         </div>
     </section>
 
-    <section id="mainbanner" class="home">
+    <section id="mainbanner" class="nothome">
         <div class="banner-wordings">
-            <h6>Look deep inside, you'll see</h6>
-            <h2>Every face</h2>
-            <h1>Has a story</h1>
-            <p>Find yours here...</p>
-            <button id="btn1">view faces</button>
+            <h1><span>#ourfaces</span></h1>
         </div>
     </section>
 
-    <section id="feature" class="section-p1">
-        <div class="fe-box">
-            <img src="features/feature-1.jpg" alt="">
-            <h6>Find your favourite</h6>
+    <div data-modal id="face-details" class="section-p1 face-details">
+        <div class="single-face">
+            <div id="main-face" >
+                <img src="the-deep-senior/senior-1.jpg" width="100%" class="main-face" alt="">
+            </div>
+            <div class="small-faces-group">
+                <div class="small-faces-col">
+                    <img src="the-deep-senior/senior-1.jpg" width="100%" class="small-face" alt="">
+                </div>
+                <div class="small-faces-col">
+                    <img src="the-deep-senior/senior-2.jpg" width="100%" class="small-face" alt="">
+                </div>
+                <div class="small-faces-col">
+                    <img src="the-deep-senior/senior-3.jpg" width="100%" class="small-face" alt="">
+                </div>
+                <div class="small-faces-col">
+                    <img src="the-deep-senior/senior-4.jpg" width="100%" class="small-face" alt="">
+                </div>
+            </div>
         </div>
-        <div class="fe-box">
-            <img src="features/feature-2.jpg" alt="">
-            <h6>Tell your stories</h6>
+        <div class="pro-des">
+            <h6>The Deep</h6>
+            <h4>Senior</h4>
+            <h2>$235.00</h2>
+            <select>
+                <option>Happy</option>
+                <option>Mid</option>
+                <option>Sad</option>
+            </select>
+            <div class="add-to-cart">
+                <input type="number" value="1">
+                <button>Add To Cart</button>
+            </div>
+            <h3>Bio</h3>
+            <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima repellendus nemo beatae minus accusamus harum perferendis iusto provident quisquam nobis expedita, quia reiciendis sunt, earum dolores laudantium eaque quo non.</span>
         </div>
-        <div class="fe-box">
-            <img src="features/feature-3.jpg" alt="">
-            <h6>Join the community</h6>
-        </div>
-        <div class="fe-box">
-            <img src="features/feature-4.jpg" alt="">
-            <h6>Put on your smile</h6>
-        </div>
-        <div class="fe-box">
-            <img src="features/feature-5.jpg" alt="">
-            <h6>Show your secrets</h6>
-        </div>
-    </section>
+        <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div id="overlay"></div>
 
     <section id="seniors" class="section-p1">
         <h2>The Seniors</h2>
@@ -203,12 +216,6 @@
         </div>
     </section>
 
-    <section id="banner" class="section-m1">
-        <h4>I'm ready when you are</h4>
-        <h2>Take me home <span>now</span></h2>
-        <button>get connected</button>
-    </section>
-
     <section id="seniors" class="section-p1">
         <h2>The Newcomers</h2>
         <p>They're hurt. They're weird. They need friends like you.</p>
@@ -341,19 +348,6 @@
                 </div>
                 <a href="#"><i class="fa fa-shopping-cart cart"></i></a>
             </div>
-        </div>
-    </section>
-
-    <section id="small-banner" class="section-p1">
-        <div class="banner-box-2">
-            <span>Want to know more about the Newcomers?</span>
-            <h4>Visit The Surface</h4>
-            <button>Click here</button>
-        </div>
-        <div class="banner-box-1">
-            <span>Or the Seniors?</span>
-            <h4>Visit The Deep</h4>
-            <button>Click here</button>
         </div>
     </section>
 
