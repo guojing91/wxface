@@ -22,10 +22,10 @@
         </div>
         <div>
             <ul class="navbar">
-                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="faces.html">Faces</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a id="bag-symbol" href="cart.html"><i class="fa fa-shopping-bag"></i></a></li>
+                <li><a class="active" id="bag-symbol" href="cart.html"><i class="fa fa-shopping-bag"></i></a></li>
                 <a href="#" id="close"><i class="fa fa-times"></i></a>
             </ul>
         </div>
@@ -35,92 +35,48 @@
         </div>
     </section>
 
-    <section id="mainbanner" class="home">
+    <section id="mainbanner" class="nothome">
         <div class="banner-wordings">
-            <h6>Look deep inside, you'll see</h6>
-            <h2>Every face</h2>
-            <h1>Has a story</h1>
-            <p>Find yours here...</p>
-            <button id="btn1">view faces</button>
+            <h1><span>#yourcart</span></h1>
         </div>
     </section>
 
-    <section id="feature" class="section-p1">
+    <section id="cart" class="section-p1">
+        <table width="100%">
+            <thead>
+                <tr>
+                    <td>Remove</td>
+                    <td>Image</td>
+                    <td>Product</td>
+                    <td>State</td>
+                    <td>Price</td>
+                    <td>Quantity</td>
+                    <td>Subtotal</td>
+                </tr>
+            </thead>
+            <tbody id="cart-table-body">
+            </tbody>
+        </table>
     </section>
 
-    <div data-modal id="face-details" class="section-p1 face-details">
-        <div class="single-face">
-            <div id="main-face">
-                <img src="" width="100%" class="main-face" alt="">
-            </div>
-            <div class="small-faces-group">
-                <div class="small-faces-col">
-                    <img src="the-deep-senior/senior-1.jpg" width="100%" class="small-face" alt="">
-                </div>
-                <div class="small-faces-col">
-                    <img src="the-deep-senior/senior-2.jpg" width="100%" class="small-face" alt="">
-                </div>
-                <div class="small-faces-col">
-                    <img src="the-deep-senior/senior-3.jpg" width="100%" class="small-face" alt="">
-                </div>
-                <div class="small-faces-col">
-                    <img src="the-deep-senior/senior-4.jpg" width="100%" class="small-face" alt="">
-                </div>
-            </div>
-        </div>
-        <div class="pro-des">
-            <h6 id="pro-des-cat">The Deep</h6>
-            <h4 id="pro-des-name">Senior</h4>
-            <h2 id="pro-des-price">$235.00</h2>
-            <select id="user-input-status">
-                <option>Happy</option>
-                <option>Mid</option>
-                <option>Sad</option>
-            </select>
-            <div class="add-to-cart">
-                <input id="user-input-qty" type="number" value="1" min="1">
-                <button class="add-to-cart-btn">Add To Cart</button>
-            </div>
-            <h3>Bio</h3>
-            <span id="pro-des-bio">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima repellendus nemo
-                beatae minus
-                accusamus harum perferendis iusto provident quisquam nobis expedita, quia reiciendis sunt, earum dolores
-                laudantium eaque quo non.</span>
-        </div>
-        <button data-close-button class="close-button">&times;</button>
-    </div>
-    <div id="overlay"></div>
-
-    <section id="seniors" class="section-p1">
-        <h2>The Seniors</h2>
-        <p>The ones you'd wish you've never met.</p>
-        <div class="senior-container" id="senior-container">
-        </div>
-    </section>
-
-    <section id="banner" class="section-m1">
-        <h4>I'm ready when you are</h4>
-        <h2>Take me home <span>now</span></h2>
-        <button>get connected</button>
-    </section>
-
-    <section id="newcomers" class="section-p1">
-        <h2>The Newcomers</h2>
-        <p>They're hurt. They're weird. They need friends like you.</p>
-        <div class="newcomer-container" id="newcomer-container">
-        </div>
-    </section>
-
-    <section id="small-banner" class="section-p1">
-        <div class="banner-box-2">
-            <span>Want to know more about the Newcomers?</span>
-            <h4>Visit The Surface</h4>
-            <button>Click here</button>
-        </div>
-        <div class="banner-box-1">
-            <span>Or the Seniors?</span>
-            <h4>Visit The Deep</h4>
-            <button>Click here</button>
+    <section id="cart-total" class="section-p1">
+        <div id="subtotal">
+            <h3>Cart Total</h3>
+            <table>
+                <tr>
+                    <td>Cart Subtotal</td>
+                    <td id="cart-subtotal">$235.00</td>
+                </tr>
+                <tr>
+                    <td>Shipping</td>
+                    <td id="shipping">$0.00</td>
+                </tr>
+                <tr>
+                    <td><strong>Total</strong></td>
+                    <td id="cart-grand-total"><strong>$0.00</strong></td>
+                </tr>
+            </table>
+            <button id="checkout-btn">Checkout</button>
         </div>
     </section>
 
@@ -138,8 +94,7 @@
     </section>
 
     <section id="footer" class="section-p1">
-        <button class="add-to-cart-btn" id="no-btn-1"></button>
-        <!-- <div class="cart-table-body" id="no-tbody-1"></div> -->
+        <button class="add-to-cart-btn" id="no-btn-2"></button>
         <div id="main-footer">
             <div class="footer-column">
                 <h2>WxFace</h2>
@@ -189,11 +144,13 @@
         </div>
     </section>
 
+    <section id="overlay"></section>
+
     <section id="user-input"></section>
 
     <script src="src/database.js"></script>
 
-    <script src="src/javascript.js"></script>
+    <script src="src/cart.js"></script>
 </body>
 
 </html>

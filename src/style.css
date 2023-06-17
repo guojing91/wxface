@@ -44,7 +44,7 @@ p {
 
 .section-p1 {
     padding: 40px 80px;
-} 
+}
 
 .section-m1 {
     margin: 40px 0;
@@ -162,7 +162,8 @@ body {
 #banner button,
 #small-banner button,
 #newsletter button,
-#face-details .pro-des button {
+#face-details .pro-des button,
+#checkout-btn {
     background-color: transparent;
     color: #088178;
     border: 1px solid #088178;
@@ -176,7 +177,8 @@ body {
 #banner button:hover,
 #small-banner button:hover,
 #newsletter button:hover,
-#face-details .pro-des button:hover {
+#face-details .pro-des button:hover,
+#checkout-btn:hover {
     background-color: #465b52;
     color: white;
 }
@@ -218,25 +220,29 @@ body {
     line-height: 1;
 }
 
-#seniors {
+#seniors,
+#newcomers {
     display: flex;
     flex-direction: column;
     text-align: center;
     /* min-width: 1250px; */
 }
 
-#seniors h2 {
+#seniors h2,
+#newcomers h2 {
     color: grey;
 }
 
-#seniors .senior-container {
+#seniors .senior-container,
+#newcomers .newcomer-container {
     display: flex;
     justify-content: center;
     padding-top: 20px;
     flex-wrap: wrap;
 }
 
-#seniors .senior {
+#seniors .senior,
+#newcomers .newcomer {
     width: 20%;
     min-width: 250px;
     padding: 15px 18px;
@@ -250,41 +256,49 @@ body {
     position: relative;
 }
 
-#seniors .senior:hover {
+#seniors .senior:hover,
+#newcomers .newcomer:hover {
     background-color: #465b52;
 }
 
-#seniors .senior img {
+#seniors .senior img,
+#newcomers .newcomer img {
     width: 100%;
     border-radius: 8px;
 }
 
-#seniors .senior .des {
+#seniors .senior .des,
+#newcomers .newcomer .des {
     text-align: start;
     padding: 5px 0;
 }
 
-#seniors .senior .des span {
+#seniors .senior .des span,
+#newcomers .newcomer .des span {
     color: #088178;
     font-size: 25px;
 }
 
-#seniors .senior .des h5 {
+#seniors .senior .des h5,
+#newcomers .newcomer .des h5 {
     padding-top: 7px;
 }
 
-#seniors .senior .des i {
+#seniors .senior .des i,
+#newcomers .newcomer .des i {
     font-size: 12px;
     color: rgb(243, 181, 25);
 }
 
-#seniors .senior .des h4 {
+#seniors .senior .des h4,
+#newcomer .newcomer .des h4 {
     padding-top: 7px;
     font-size: 36px;
     color: grey;
 }
 
-#seniors .senior .cart {
+#seniors .senior .cart,
+#newcomers .newcomer .cart {
     font-size: 20px;
     color: white;
     background-color: grey;
@@ -529,7 +543,7 @@ body {
     margin-top: 20px;
 }
 
-#footer .copyright p{
+#footer .copyright p {
     font-size: 20px;
     color: gray;
 }
@@ -548,7 +562,7 @@ dialog h1 {
 
 #face-details {
     background-color: black;
-    display: flex;   
+    display: flex;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -681,32 +695,132 @@ dialog h1 {
     font-size: 20px;
 }
 
+/* Cart Page */
+
+#cart table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    white-space: nowrap;
+}
+
+#cart table img {
+    width: 100px;
+}
+
+#cart table td {
+    width: 120px;
+    text-align: center;
+}
+
+/* #cart table td:nth-child(2) {
+    width: 120px;
+    text-align: center;
+}
+
+#cart table td:nth-child(3) {
+    width: 150px;
+    text-align: center;
+}
+
+#cart table td:nth-child(4),
+#cart table td:nth-child(5) {
+    width: 100px;
+    text-align: center;
+}
+
+#cart table td:nth-child(6),
+#cart table td:nth-child(7) {
+    width: 120px;
+    text-align: center;
+} */
+
+#cart table td:nth-child(6) input {
+    width: 70px;
+    padding: 10px 5px 10px 15px;
+}
+
+#cart table thead {
+    border: 1px solid #e2e9e1;
+    border-left: none;
+    border-right: none;
+}
+
+#cart table thead td {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 24px;
+    padding: 18px 0;
+}
+
+#cart table tbody tr td {
+    padding-top: 15px;
+}
+
+#cart table tbody td {
+    font-size: 24px;
+}
+
+#subtotal {
+    width: 50%;
+    margin-bottom: 30px;
+    border: 1px solid #e2e9e1;
+    padding: 30px;
+}
+
+#subtotal table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px auto;
+}
+
+#subtotal table td {
+    width: 50%;
+    border: 1px solid #e2e9e1;
+    padding: 10px;
+}
+
 /* Start Media Query */
 @media (max-width: 1180px) {
-    #seniors {
+
+    #seniors,
+    #newcomers {
         padding: 40px 20px;
         flex-wrap: wrap;
     }
-    #seniors .senior-container .senior {
+
+    #seniors .senior-container .senior,
+    #newcomers .newcomer-container .newcomer {
         margin-left: 50px;
         margin-right: 50px;
     }
+
     #newsletter .signup {
         flex-direction: column;
         justify-content: center;
     }
+
     #newsletter .signup .newstext {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
+
     #newsletter .signup .email-address {
         display: flex;
         justify-content: center;
         align-items: center;
     }
 }
+
+#no-btn-1,
+#no-btn-2,
+#no-tbody-1,
+#no-tbody-2 {
+    display: none;
+}
+
 @media (max-width: 799px) {
     .navbar {
         display: flex;
@@ -723,49 +837,64 @@ dialog h1 {
         padding: 80px 0 0 10px;
         transition: 0.3s ease;
     }
+
     .navbar.active {
         right: 0;
     }
+
     .navbar li {
         margin-bottom: 25px;
     }
+
     .navbar li a {
         color: black;
     }
+
     .navbar #close {
         display: flex;
         text-decoration: none;
     }
+
     .mobile {
         display: flex;
         align-items: center;
     }
+
     .mobile i {
         padding-left: 20px;
     }
+
     #feature {
         justify-content: center;
     }
+
     #feature .fe-box {
         margin: 15px 30px;
     }
+
     #feature,
     #seniors,
+    #newcomers,
     #small-banner .banner-box-1,
     #small-banner .banner-box-2 {
         width: 100%;
         min-width: none;
     }
-    #seniors .senior {
+
+    #seniors .senior,
+    #newcomers .newcomer {
         margin: 15px 20px;
     }
+
     #small-banner .banner-box-1,
     #small-banner .banner-box-2 {
         height: 400px;
     }
+
     #small-banner span {
         font-size: 20px;
     }
+
     #newsletter .signup,
     #newsletter .signup .newstext {
         display: flex;
@@ -773,10 +902,12 @@ dialog h1 {
         align-items: center;
         justify-content: center;
     }
+
     #newsletter .signup .email-address {
         display: flex;
         justify-content: center;
     }
+
     #close {
         position: absolute;
         top: 30px;
@@ -784,49 +915,60 @@ dialog h1 {
         color: black;
         font-size: 24px;
     }
+
     #bag-symbol {
         display: none;
     }
 }
+
 @media (max-width: 580px) {
     #header {
         padding: 20px 25px;
     }
+
     #mainbanner {
         background-position: right -330px center;
         align-items: center;
     }
+
     #mainbanner .banner-wordings {
         text-align: center;
         margin-left: 0;
         padding-left: 25px;
         padding-right: 25px;
     }
+
     .navbar {
         right: -200px;
         width: 200px;
     }
+
     #small-banner {
         padding: 20px;
     }
+
     #small-banner .banner-box-2 {
         background-position: right -60px center;
         height: 300px;
         padding-right: 20px;
     }
+
     #small-banner .banner-box-1 {
         background-position: left -60px center;
         height: 300px;
         padding-left: 100px;
         text-align: right;
     }
+
     #newsletter .signup .newstext h4,
     #newsletter .signup .newstext p {
         text-align: center;
     }
+
     #newsletter .signup .email-address {
-        flex-direction: column;  
+        flex-direction: column;
     }
+
     #newsletter input {
         border: 1px solid black;
         border-right: auto;
@@ -835,6 +977,7 @@ dialog h1 {
         border-bottom-right-radius: auto;
         margin-bottom: 10px;
     }
+
     #newsletter button {
         border: 1px solid black;
         border-left: auto;
